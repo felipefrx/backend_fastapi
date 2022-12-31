@@ -5,4 +5,4 @@ class user(BaseModel):
     id: Optional[str] = None
     name: str
     email: str
-    telefone: str
+    telephone: str

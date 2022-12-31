@@ -6,4 +6,4 @@ class user(Base):
     id = Column(Integer, primary_key = True, Index = True)
     name = Column(String)
     email = Column(String)
-    telefone = Column(String)
+    telephone = Column(String)
