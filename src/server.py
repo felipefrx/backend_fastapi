@@ -18,4 +18,9 @@ def read_user():
 @app.post('/user')
 def create_user(user: User, db: Session = Depends(get_db) ):
     user_create = RepositoryUser().create(user)
-    pass
+    return user_create
+
+@app.get('/user')
+def read_users(db: Session = Depends(get_db) ):
+    users = RpositoryUser(db).read()
+    return users
