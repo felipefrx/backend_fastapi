@@ -1,8 +1,11 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
-from src.infra.sql_alchemy.config.database import get_db
+from src.infra.sql_alchemy.config.database import get_db, create_db
 from src.schemas.schemas import User
 from src.infra.sql_alchemy.repositories.user import RepositoryUser
+
+
+create_db()
 
 
 app = FastAPI()
